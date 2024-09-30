@@ -1,0 +1,18 @@
+services:
+  nodo1:
+    image: cassandra:latest
+    container_name: nodo1
+    ports:
+      - "7001:9042"
+    volumes:
+      - ./postulaciones.xlsx:/postulaciones.xlsx
+  nodo2:
+    image: cassandra:latest
+    container_name: nodo2
+    ports:
+      - "7002:9042"
+  nodo3:
+    image: cassandra:latest
+    container_name: nodo3
+    ports:
+      - "7003:9042"

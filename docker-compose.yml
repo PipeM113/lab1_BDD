@@ -6,13 +6,28 @@ services:
       - "7001:9042"
     volumes:
       - ./postulaciones.xlsx:/postulaciones.xlsx
+    deploy:
+      resources:
+        limits:
+          memory: 3g
+          cpus: "1"
   nodo2:
     image: cassandra:latest
     container_name: nodo2
     ports:
       - "7002:9042"
+    deploy:
+      resources:
+        limits:
+          memory: 3g
+          cpus: "1"
   nodo3:
     image: cassandra:latest
     container_name: nodo3
     ports:
       - "7003:9042"
+    deploy:
+      resources:
+        limits:
+          memory: 3g
+          cpus: "1"
